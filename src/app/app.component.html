@@ -1,20 +1,191 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
-  <img width="300" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAyNTAgMjUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNTAgMjUwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDojREQwMDMxO30NCgkuc3Qxe2ZpbGw6I0MzMDAyRjt9DQoJLnN0MntmaWxsOiNGRkZGRkY7fQ0KPC9zdHlsZT4NCjxnPg0KCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMTI1LDMwIDEyNSwzMCAxMjUsMzAgMzEuOSw2My4yIDQ2LjEsMTg2LjMgMTI1LDIzMCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAJIi8+DQoJPHBvbHlnb24gY2xhc3M9InN0MSIgcG9pbnRzPSIxMjUsMzAgMTI1LDUyLjIgMTI1LDUyLjEgMTI1LDE1My40IDEyNSwxNTMuNCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAxMjUsMzAgCSIvPg0KCTxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik0xMjUsNTIuMUw2Ni44LDE4Mi42aDBoMjEuN2gwbDExLjctMjkuMmg0OS40bDExLjcsMjkuMmgwaDIxLjdoMEwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMQ0KCQlMMTI1LDUyLjF6IE0xNDIsMTM1LjRIMTA4bDE3LTQwLjlMMTQyLDEzNS40eiIvPg0KPC9nPg0KPC9zdmc+DQo=">
+<app-kendo-grid-test></app-kendo-grid-test>
+<div id="example">
+    <div id="dialog">
+    </div>
+    <span id="undo" style="display:none" class="k-button hide-on-narrow">Click here to open the dialog</span>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="http://angularjs.blogspot.ca/">Angular blog</a></h2>
-  </li>
-</ul>
+    <table id="grid">
+        <colgroup>
+            <col />
+            <col />
+            <col style="width:110px" />
+            <col style="width:120px" />
+            <col style="width:130px" />
+        </colgroup>
+        <thead>
+        <tr>
+            <th data-field="make">Car Make</th>
+            <th data-field="model">Car Model</th>
+            <th data-field="year">Year</th>
+            <th data-field="category">Category</th>
+            <th data-field="airconditioner">Air Conditioner</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Volvo</td>
+            <td>S60</td>
+            <td>2010</td>
+            <td>Saloon</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Audi</td>
+            <td>A4</td>
+            <td>2002</td>
+            <td>Saloon</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>BMW</td>
+            <td>535d</td>
+            <td>2006</td>
+            <td>Saloon</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>BMW</td>
+            <td>320d</td>
+            <td>2006</td>
+            <td>Saloon</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>VW</td>
+            <td>Passat</td>
+            <td>2007</td>
+            <td>Saloon</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>VW</td>
+            <td>Passat</td>
+            <td>2008</td>
+            <td>Saloon</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Peugeot</td>
+            <td>407</td>
+            <td>2006</td>
+            <td>Saloon</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Honda</td>
+            <td>Accord</td>
+            <td>2008</td>
+            <td>Saloon</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>Alfa Romeo</td>
+            <td>159</td>
+            <td>2008</td>
+            <td>Saloon</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>Nissan</td>
+            <td>Almera</td>
+            <td>2001</td>
+            <td>Saloon</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Mitsubishi</td>
+            <td>Lancer</td>
+            <td>2008</td>
+            <td>Saloon</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Opel</td>
+            <td>Vectra</td>
+            <td>2008</td>
+            <td>Saloon</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Toyota</td>
+            <td>Avensis</td>
+            <td>2006</td>
+            <td>Saloon</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>Toyota</td>
+            <td>Avensis</td>
+            <td>2008</td>
+            <td>Saloon</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Toyota</td>
+            <td>Avensis</td>
+            <td>2008</td>
+            <td>Saloon</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Audi</td>
+            <td>Q7</td>
+            <td>2007</td>
+            <td>SUV</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Hyundai</td>
+            <td>Santa Fe</td>
+            <td>2012</td>
+            <td>SUV</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Hyundai</td>
+            <td>Santa Fe</td>
+            <td>2013</td>
+            <td>SUV</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Nissan</td>
+            <td>Qashqai</td>
+            <td>2007</td>
+            <td>SUV</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Mercedez</td>
+            <td>B Class</td>
+            <td>2007</td>
+            <td>Hatchback</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Lancia</td>
+            <td>Ypsilon</td>
+            <td>2006</td>
+            <td>Hatchback</td>
+            <td>Yes</td>
+        </tr>
+        </tbody>
+    </table>
 
+<input type="checkbox" [checked]="isChecked()">
+
+<div id="window">
+    <h4>Armchair 402</h4>
+    <div class="armchair"><img src="../content/web/window/armchair-402.png" alt="Armchair 402" /> Artek Alvar Aalto - Armchair 402</div>
+    <p>Alvar Aalto is one of the greatest names in modern architecture and design. Glassblowers at the iittala factory still meticulously handcraft the legendary vases that are variations on one theme, fluid organic shapes that let the end user decide the use. Interpretations of the shape in new colors and materials add to the growing Alvar Aalto Collection that remains true to his original design.</p>
+
+    <p>Born Hugo Alvar Henrik Aalto (February 3, 1898 - May 11, 1976) in Kuortane, Finland, was noted for his humanistic approach to modernism. He studied architecture at the Helsinki University of Technology from 1916 to 1921. In 1924 he married architect Aino Marsio.</p>
+
+    <p>Alvar Aalto was one of the first and most influential architects of the Scandinavian modern movement, and a member of the Congres Internationaux d'Architecture Moderne. Major architectural works include the Finlandia Hall in Helsinki, Finland, and the campus of Helsinki University of Technology.</p>
+
+    <p>Source: <a href="http://www.aalto.com/about-alvar-aalto.html" title="About Alvar Aalto">www.aalto.com</a></p>
+</div>
+
+<span id="undo" style="display:none" class="k-button hide-on-narrow">Click here to open the window.</span>
+
+<div class="responsive-message"></div>

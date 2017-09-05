@@ -1,0 +1,50 @@
+circle {
+  cursor: pointer;
+}
+
+.node text {
+  font: 10px sans-serif;
+}
+
+.online circle {
+  fill: green;
+}
+
+.offline circle {
+  fill: red;
+}
+
+.legend {
+  display: inline-block;
+  border: 1px #ccc solid;
+  width: 120px;
+  color: #ccc;
+  text-align: center;
+}
+
+.legend label {
+  background-color: #ccc;
+  display: inline-block;
+  color: white;
+  width: 100%;
+}
+
+.legend img {
+  display: block;
+  margin: 0 auto;
+}
+
+.legend div {
+  padding: 5px;
+}
+
+.legend-title {
+  fill: #ccc;
+  color: white;
+}
+
+.link {
+  fill: none;
+  stroke-opacity: 0.6;
+  stroke-width: 3px;
+}

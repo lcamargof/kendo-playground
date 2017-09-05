@@ -1,0 +1,58 @@
+<span *ngIf="showTitle">{{ column.title }}</span>
+<div style="float: right;">
+    <button #anchor
+            style="border: none;
+            background-image: none;"
+            id="anchor-{{index}}"
+            (click)="toggleFilter()"
+            class="k-button" [class.selected]="filtered">
+        <span class="k-i-filter k-icon"></span>
+    </button>
+    <kendo-popup
+        id="popup-{{index}}"
+        [popupClass]="'content popup'"
+        #popup [anchor]="anchor"
+        (anchorViewportLeave)="show = false"
+        *ngIf="show"
+    >
+        <div [ngSwitch]="type">
+            <app-custom-string-filter *ngSwitchCase="'string'"
+                                      [column]="column"
+                                      [filter]="filter"
+                                      (onAction)="filterAction($event)">
+            </app-custom-string-filter>
+            <app-custom-numeric-filter *ngSwitchCase="'numeric'"
+                                      [column]="column"
+                                      [filter]="filter"
+                                      (onAction)="filterAction($event)">
+            </app-custom-numeric-filter>
+            <app-custom-date-filter *ngSwitchCase="'date'"
+                                       [column]="column"
+                                       [filter]="filter"
+                                       (onAction)="filterAction($event)">
+            </app-custom-date-filter>
+            <app-custom-daterange-filter *ngSwitchCase="'daterange'"
+                                    [column]="column"
+                                    [filter]="filter"
+                                    (onAction)="filterAction($event)">
+            </app-custom-daterange-filter>
+            <app-custom-boolean-filter *ngSwitchCase="'boolean'"
+                                    [column]="column"
+                                    [filter]="filter"
+                                    (onAction)="filterAction($event)">
+            </app-custom-boolean-filter>
+            <app-custom-filesize-filter *ngSwitchCase="'filesize'"
+                                    [column]="column"
+                                    [filter]="filter"
+                                    (onAction)="filterAction($event)">
+            </app-custom-filesize-filter>
+            <app-custom-multiselect-filter *ngSwitchCase="'multiselect'"
+                                        [column]="column"
+                                           [index]="index"
+                                        [options]="options"
+                                        [filter]="filter"
+                                        (onAction)="filterAction($event)">
+            </app-custom-multiselect-filter>
+        </div>
+    </kendo-popup>
+</div>
