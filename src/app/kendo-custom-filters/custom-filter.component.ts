@@ -39,7 +39,6 @@ export class CustomFilterComponent {
 
     @HostListener('document:click', ['$event'])
     public documentClick(event: any): void {
-        console.log('I enter');
         if (!this.contains(event.target)) {
             this.toggleFilter(false);
         }

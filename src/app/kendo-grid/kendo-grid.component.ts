@@ -8,17 +8,21 @@ interface KendoGridColumn {
   filter: string;
   title: string;
   options?: any;
-};
+  sortable?: boolean;
+}
 
 @Component({
     selector: 'app-kendo-grid-test',
     template: `
-        <kendo-grid #grid (filterChange)="filterChange($event)" [data]="result" [filter]="filter">
-            <kendo-grid-column *ngFor="let c of columns; let i = index;" [field]="c.field" [title]="c.title">
+        <kendo-grid #grid (filterChange)="filterChange($event)" [data]="result" [sortable]="true" [filter]="filter">
+            <kendo-grid-column *ngFor="let c of columns; let i = index;" 
+                               [field]="c.field" 
+                               [title]="c.title" [sortable]="c.sortable === false ? false : true">
                 <ng-template kendoGridHeaderTemplate let-column>
                     <app-kendo-grid-custom-filter [filter]="grid.filter"
                                                   [index]="i"
-                                                  [column]="column" [type]="c.filter" [options]="c.options || {}">
+                                                  [column]="column" [type]="c.filter" 
+                                                  [options]="c.options || {}">
                     </app-kendo-grid-custom-filter>
                 </ng-template>
             </kendo-grid-column>
@@ -39,7 +43,7 @@ export class KendoGridTestComponent implements OnInit {
                 { label: 'another test', value: 'another' }
             ]
         }},
-        { field: 'type', title: 'Type', filter: 'multiselect', options: {
+        { field: 'type', title: 'Type', filter: 'multiselect', sortable: false, options: {
             data: [
                 { label: 'test', value: 'test' },
                 { label: 'another test', value: 'another' }

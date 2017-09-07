@@ -72,7 +72,6 @@ export class CustomMultiselectFilterComponent extends CustomFilterBaseComponent 
     }
 
     onChange(event, value) {
-        console.log('on change');
         if (this.multiple) {
             const index = this.selected.indexOf(value);
 
