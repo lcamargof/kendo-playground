@@ -19,6 +19,7 @@ interface KendoGridColumn {
                                [field]="c.field" 
                                [title]="c.title" [sortable]="c.sortable === false ? false : true">
                 <ng-template kendoGridHeaderTemplate let-column>
+                    <input type="checkbox">
                     <app-kendo-grid-custom-filter [filter]="grid.filter"
                                                   [index]="i"
                                                   [column]="column" [type]="c.filter" 
