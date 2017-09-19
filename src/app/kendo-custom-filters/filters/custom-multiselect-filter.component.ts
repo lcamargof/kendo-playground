@@ -19,9 +19,9 @@ import { CustomFilterBaseComponent } from '../shared/custom-filter-base-componen
                 <div class="mt-10" *ngFor="let item of data; let i = index">
                     <input type="checkbox" 
                            #checkbox
-                           id="checkbox-{{index}}-{{i}}" 
-                           [checked]="isSelected(checkbox, item.value, index)" 
-                            class="k-checkbox" (click)="onChange($event, item.value)">
+                           id="checkbox-{{index}}-{{i}}"
+                           8d(checkbox, item.value, index)"
+                           class="k-checkbox" (click)="onChange($event, item.value)">
                     <label for="checkbox{{i}}" class="k-checkbox-label">{{ item.label }}</label>
                 </div>
                 <hr>
@@ -77,8 +77,14 @@ export class CustomMultiselectFilterComponent extends CustomFilterBaseComponent 
 
             if (index !== -1) {
                 this.selected.splice(index, 1);
+                setTimeout(() => {
+                    event.target.checked = false;
+                });
             } else {
                 this.selected.push(value);
+                setTimeout(() => {
+                    event.target.checked = true;
+                });
             }
 
             this.value = [...this.selected];

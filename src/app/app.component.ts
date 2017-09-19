@@ -8,6 +8,6 @@ declare var $: any;
     encapsulation: ViewEncapsulation.None,
     styleUrls: ['./app.component.css', '../../node_modules/@progress/kendo-theme-default/dist/all.css']
 })
-export class AppComponent{
+export class AppComponent {
 
 }

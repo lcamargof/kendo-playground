@@ -12,6 +12,26 @@ interface KendoGridColumn {
 }
 
 @Component({
+    selector: 'app-kendo-test',
+    template: `<kendo-grid
+        [data]="data"
+        [pageSize]="5"
+        [pageable]="true"
+        [scrollable]="'none'"
+    >
+        <kendo-grid-column field="test" title="test"></kendo-grid-column>
+        <kendo-grid-column field="test" title="test"></kendo-grid-column>
+        <kendo-grid-column field="test" title="test"></kendo-grid-column>
+        <app-kendo-test></app-kendo-test>
+    </kendo-grid>`
+})
+export class KendoGridDetailTestComponent {
+    data = [
+        { test: 'test' }, { test: 'test1' }, { test: 'test2' }
+    ];
+}
+
+@Component({
     selector: 'app-kendo-grid-test',
     template: `
         <kendo-grid #grid (filterChange)="filterChange($event)" [data]="result" [sortable]="true" [filter]="filter">
@@ -27,6 +47,9 @@ interface KendoGridColumn {
                     </app-kendo-grid-custom-filter>
                 </ng-template>
             </kendo-grid-column>
+            <div *kendoGridDetailTemplate>
+                <app-kendo-test></app-kendo-test>
+            </div>
         </kendo-grid>
     `
 })
