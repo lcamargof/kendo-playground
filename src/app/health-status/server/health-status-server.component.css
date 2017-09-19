@@ -1,0 +1,71 @@
+.rtk-item {
+    background-color: #f2f2f2;
+    border: 1px #ccc solid;
+    margin-right: 15px;
+    margin-top: 15px;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.rtk-item-container {
+    display: flex;
+}
+
+.services {
+    border-top: 1px #ccc solid;
+}
+
+.services > ul > li:last-child {
+    border-bottom: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.rtk-info-container > ul {
+    width: 200px;
+}
+
+ul > li {
+    width: 100%;
+    border-bottom: 1px #ccc solid;
+    line-height: 22px;
+}
+
+ul > li > div {
+    padding: 0 5px;
+}
+
+ul > li > .error {
+    background-color: #f2dede;
+}
+
+.rtk-info-container > ul > li > div > .value {
+    display: block;
+    float: right;
+}
+
+.rtk-info-container > ul > li:last-child {
+    border-bottom: none;
+}
+
+.service-toggle {
+    cursor: pointer;
+}
+
+.service-toggle:hover {
+    background-color: #ccc;
+    transition: background-color 300ms linear;
+}
+
+.rtk-server {
+    width: 120px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px #ccc solid;
+}

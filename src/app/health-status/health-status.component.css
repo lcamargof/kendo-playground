@@ -1,50 +1,17 @@
-circle {
-  cursor: pointer;
+.rtk {
+    margin: 0 auto 15px auto;
+    width: 150px;
+    height: 120px;
+    text-align: center;
+    line-height: 120px;
+    border: 1px #ccc solid;
+    background-color: #f2f2f2;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
-.node text {
-  font: 10px sans-serif;
-}
-
-.online circle {
-  fill: green;
-}
-
-.offline circle {
-  fill: red;
-}
-
-.legend {
-  display: inline-block;
-  border: 1px #ccc solid;
-  width: 120px;
-  color: #ccc;
-  text-align: center;
-}
-
-.legend label {
-  background-color: #ccc;
-  display: inline-block;
-  color: white;
-  width: 100%;
-}
-
-.legend img {
-  display: block;
-  margin: 0 auto;
-}
-
-.legend div {
-  padding: 5px;
-}
-
-.legend-title {
-  fill: #ccc;
-  color: white;
-}
-
-.link {
-  fill: none;
-  stroke-opacity: 0.6;
-  stroke-width: 3px;
+.rtk-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
 }

@@ -1,0 +1,49 @@
+<div class="rtk-item">
+    <div class="rtk-item-container">
+        <div class="rtk-server">
+            <div>
+                AD RTK <br> {{ data.name }}
+            </div>
+        </div>
+        <div class="rtk-info-container">
+            <ul>
+                <li>
+                    <div>
+                        Host Status <span class="value"><strong>{{ data.status }}</strong></span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        CPU Utilization <span class="value">{{ data.cpu }}</span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        Memory Utilization <span class="value">{{ data.memory }}</span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        Total Disc Space <span class="value">{{ data.totalSpace }}</span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        Available D/Space <span class="value">{{ data.availableSpace }}</span>
+                    </div>
+                </li>
+                <li class="service-toggle" [style.background-color]="detail ? '#ccc' : ''" (click)="toggleServices()">
+                    <div style="float: right;">Services <i class="fa fa-plus"></i></div>
+                    <div style="clear: both;"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="services" *ngIf="detail">
+        <ul>
+            <li *ngFor="let service of data.services">
+                <div [ngClass]="{'error': !service.status}">{{service.name}}</div>
+            </li>
+        </ul>
+    </div>
+</div>
